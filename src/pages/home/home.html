@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    	  <ion-list>
+
+        <ion-item>
+            <ion-label floating>Destination</ion-label>
+            <ion-input type="text" [(ngModel)]="Destination"></ion-input>
+        </ion-item>
+    </ion-list>
+ <ion-fab right middle>
+      <button ion-fab (click)=" initializeMap()"><ion-icon name="pin"></ion-icon></button>
+      <button ion-fab (click)="calculateAndDisplayRoute()"><ion-icon name="navigate"></ion-icon></button>
+ </ion-fab>
+    <button ion-button full (click)="calculateAndDisplayRoute()">Get Direction</button>
+
+    <div id="map_canvas"></div>
+	
+	
+</ion-content>
+ 
